@@ -1,4 +1,0 @@
-timestamp,mfrid,prodid,sensorid,flags,switch,voltage,freq,reactive,real,apparent,current,temperature
-1571152533.1189754,4,2,16085,11111000,0,235,49.8984375,0,0,None,None,None
-1571152539.65176,4,2,11756,11111000,1,237,49.8984375,0,0,None,None,None
-1571152543.0929506,4,2,16085,11111000,0,236,49.94921875,0,0,None,None,None
