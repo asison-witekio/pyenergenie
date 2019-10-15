@@ -3,7 +3,15 @@
 # Crypto engine for OpenThings, including crc calculation
 
 
+
 ran = None
+
+#static uint16_t ran;
+
+#void seed(uint8_t pid, uint16_t pip)
+#{
+#	ran = ((((uint16_t) pid) << 8) ^ pip);
+#}
 
 
 def init(pid, pip):
@@ -11,6 +19,17 @@ def init(pid, pip):
     global ran
     ran = (((pid&0xFF)<<8) ^ pip) & 0xFFFF # maintain U16
 
+
+#uint8_t crypt(uint8_t dat)
+#{
+#	unsigned char i; //(u8)
+
+#	for (i = 0; i < 5; ++i)
+#	{
+#		ran = (ran & 1) ? ((ran >> 1) ^ 62965U) : (ran >> 1);
+#	}
+#	return (uint8_t)(ran ^ dat ^ 90U);
+#}
 
 def cryptByte(data):
     """crypt a byte of data and update the crypto engine state variable"""
